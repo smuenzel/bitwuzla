@@ -26,7 +26,7 @@ using namespace node;
 NodeManager&
 NodeManager::get()
 {
-  thread_local static NodeManager mgr;
+  /* thread_local */ static NodeManager mgr;
   return mgr;
 }
 
