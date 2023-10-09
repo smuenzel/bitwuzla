@@ -278,6 +278,13 @@ class BitVector
    * @return The uint64_t representation.
    */
   uint64_t to_uint64(bool truncate = false) const;
+#ifdef CAML_MLVALUES_H
+  /**
+ * Get OCaml Zarith value of this bit-vector.
+ * @return A Z.t value.
+ */
+  value to_zarith() const;
+#endif
 
   /** @return the size of this bit-vector. */
   uint64_t size() const { return d_size; }

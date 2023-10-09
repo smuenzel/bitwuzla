@@ -793,6 +793,18 @@ std::tuple<std::string, std::string, std::string> Term::value(
     uint8_t base) const;
 #endif
 
+#ifdef CAML_MLVALUES_H
+/**
+ * Get OCaml Zarith value of bitvector value term.
+ *
+ * @param base Ingored for this template instantiation.
+ *
+ * @return A Z.t value.
+ */
+template <>
+value Term::value(uint8_t base) const;
+#endif
+
 /**
  * Syntactical equality operator.
  *
